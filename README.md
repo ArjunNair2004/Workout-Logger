@@ -75,3 +75,8 @@ View: index.jsp (Data entry form) & summary.jsp (History dashboard).
 
 Controller: WorkoutServlet.java, ViewServlet.java, and DeleteServlet.java handle HTTP requests, input validation, and database routing.
 
+📸 Screenshots
+
+<img width="1917" height="971" alt="image" src="https://github.com/user-attachments/assets/af20d3f5-40ab-4255-9e11-9652a4f19685" />
+
+<img width="1917" height="980" alt="image" src="https://github.com/user-attachments/assets/980b775d-8b50-47ba-8aa9-81abe5e574b6" />
