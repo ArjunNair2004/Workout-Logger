@@ -75,9 +75,3 @@ View: index.jsp (Data entry form) & summary.jsp (History dashboard).
 
 Controller: WorkoutServlet.java, ViewServlet.java, and DeleteServlet.java handle HTTP requests, input validation, and database routing.
 
-📸 Screenshots
-(Optional: You can take a screenshot of your beautiful Glassmorphism form and the history page, upload them to your repository, and link them here!)
-
-Add form screenshot link here.
-
-Add summary screenshot link here.
