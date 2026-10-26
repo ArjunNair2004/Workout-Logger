@@ -27,13 +27,13 @@ public class ViewServlet extends HttpServlet {
             while (rs.next()) {
                 WorkoutLog log = new WorkoutLog();
                 log.setId(rs.getInt("id"));
+                log.setUserName(rs.getString("user_name"));
                 log.setDayOfWeek(rs.getString("day_of_week"));
                 log.setWorkoutSplit(rs.getString("workout_split"));
                 log.setProteinIntake(rs.getInt("protein_intake"));
                 log.setGymTime(rs.getString("gym_time"));
                 log.setDurationMinutes(rs.getInt("duration_minutes"));
                 
-                // Trimming the .0 off the end of the SQL timestamp for a cleaner look
                 String createdAt = rs.getString("created_at");
                 if (createdAt != null && createdAt.endsWith(".0")) {
                     createdAt = createdAt.substring(0, createdAt.length() - 2);

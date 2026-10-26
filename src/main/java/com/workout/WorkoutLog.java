@@ -2,6 +2,7 @@ package com.workout;
 
 public class WorkoutLog {
     private int id;
+    private String userName;
     private String dayOfWeek;
     private String workoutSplit;
     private int proteinIntake;
@@ -11,6 +12,9 @@ public class WorkoutLog {
 
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
+    
+    public String getUserName() { return userName; }
+    public void setUserName(String userName) { this.userName = userName; }
     
     public String getDayOfWeek() { return dayOfWeek; }
     public void setDayOfWeek(String dayOfWeek) { this.dayOfWeek = dayOfWeek; }

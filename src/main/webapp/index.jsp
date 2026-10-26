@@ -9,54 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { 
-            font-family: 'Poppins', sans-serif; 
-            background: linear-gradient(135deg, #2b5876 0%, #4e4376 100%); 
-            min-height: 100vh; 
-            display: flex; 
-            align-items: center; 
-            padding-top: 20px; 
-            padding-bottom: 20px;
-            color: white;
-        }
-        .glass-card { 
-            background: rgba(255, 255, 255, 0.1); 
-            backdrop-filter: blur(12px); 
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 15px; 
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); 
-        }
-        .form-control, .form-select {
-            background: rgba(0, 0, 0, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: white;
-        }
-        .form-control:focus, .form-select:focus {
-            background: rgba(0, 0, 0, 0.25);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            color: white;
-            box-shadow: none;
-        }
-        .form-control::placeholder {
-            color: rgba(255, 255, 255, 0.6);
-        }
-        select option {
-            background: #4e4376;
-            color: white;
-        }
-        .btn-custom { 
-            background-color: #4a90e2; 
-            color: white; 
-            font-weight: 600; 
-            border-radius: 8px; 
-            padding: 10px; 
-            border: none;
-        }
-        .btn-custom:hover { 
-            background-color: #357abd; 
-            color: white; 
-        }
+        body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #2b5876 0%, #4e4376 100%); min-height: 100vh; display: flex; align-items: center; padding-top: 20px; padding-bottom: 20px; color: white;}
+        .glass-card { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 15px; box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); }
+        .form-control, .form-select { background: rgba(0, 0, 0, 0.15); border: 1px solid rgba(255, 255, 255, 0.2); color: white; }
+        .form-control:focus, .form-select:focus { background: rgba(0, 0, 0, 0.25); border: 1px solid rgba(255, 255, 255, 0.4); color: white; box-shadow: none; }
+        .form-control::placeholder { color: rgba(255, 255, 255, 0.6); }
+        select option { background: #4e4376; color: white; }
+        .btn-custom { background-color: #4a90e2; color: white; font-weight: 600; border-radius: 8px; padding: 10px; border: none; }
+        .btn-custom:hover { background-color: #357abd; color: white; }
     </style>
 </head>
 <body>
@@ -74,6 +34,11 @@
             </c:if>
             
             <form action="WorkoutServlet" method="POST">
+                <div class="mb-3">
+                    <label class="form-label fw-semibold text-light">Your Name</label>
+                    <input type="text" name="userName" class="form-control" placeholder="e.g., John" required>
+                </div>
+
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label class="form-label fw-semibold text-light">Day of the Week</label>
