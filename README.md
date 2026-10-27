@@ -47,16 +47,16 @@ The application follows the classic **Model-View-Controller (MVC)** pattern usin
 
 ## 📸 Screenshots
 
-| Entry Form (Front Page) | History Dashboard (Result Page) |
-|:---:|:---:|
-| ![Front Page](<Workout Logger Front Page.png>) | ![Result Page](<Workout Logger Result Page.png>) |
+| Entry Form (Front Page) | History Dashboard (Result Page) | Edit Page |
+|:---:|:---:|:---:|
+| ![Front Page](<Workout Logger Front Page.png>) | ![Result Page](<Workout Logger Result Page.png>) | ![Edit Page](<Workout Logger Edit Page.png>) |
 
 ---
 
 ## 🌟 Features
 
-- **Comprehensive tracking** – log the day of the week, target muscle group (split), gym entry time, workout duration (in minutes) and daily protein intake.
-- **✏️ Edit records** – every entry on the history dashboard has an **Edit** button that opens an edit page where you can update the saved details and save the changes back to the database.
+- **Comprehensive tracking** – log your name, the day of the week, target muscle group (split), gym entry time, workout duration (in minutes) and daily protein intake (in grams).
+- **✏️ Edit records** – every entry on the history dashboard has an **Edit** button that opens an **Edit Workout** page, pre-filled with the saved values. Change any field and press **Update Log** to save, or **Cancel** to go back without changing anything.
 - **Full CRUD functionality** – **C**reate, **R**ead, **U**pdate and **D**elete workout records.
 - **Modern Glassmorphism UI** – a translucent, frosted-glass look created with `backdrop-filter` and Bootstrap 5 over a vibrant gradient background.
 - **Automatic timestamps** – the database records the exact date and time each log is created.
@@ -136,8 +136,9 @@ Workout-Logger/
 │           ├── <edit page>.jsp            # Edit form for an existing log
 │           └── WEB-INF/
 │               └── lib/                   # mysql-connector-j, JSTL JARs
-├── Workout Logger Front Page.png          # Screenshot
-├── Workout Logger Result Page.png         # Screenshot
+├── Workout Logger Front Page.png          # Screenshot – entry form
+├── Workout Logger Result Page.png         # Screenshot – history dashboard
+├── Workout Logger Edit Page.png           # Screenshot – edit page
 ├── .gitignore
 └── README.md
 ```
@@ -151,6 +152,7 @@ The application uses a single table, `logs`, inside the `workout_db` database.
 | Column | Type | Constraints | Description |
 |---|---|---|---|
 | `id` | `INT` | `PRIMARY KEY`, `AUTO_INCREMENT` | Unique ID for each log (used to find the record being edited or deleted) |
+| `<name column>` | `VARCHAR(...)` | `NOT NULL` | The "Your Name" value entered on the form <!-- TODO: replace with your real column name and type, and add it to the CREATE TABLE script below --> |
 | `day_of_week` | `VARCHAR(20)` | `NOT NULL` | Day of the workout (e.g. Monday) |
 | `workout_split` | `VARCHAR(50)` | `NOT NULL` | Muscle group / split trained (e.g. Chest) |
 | `protein_intake` | `INT` | `NOT NULL` | Protein consumed that day (grams) |
@@ -194,6 +196,8 @@ USE workout_db;
 
 CREATE TABLE logs (
     id INT PRIMARY KEY AUTO_INCREMENT,
+    -- TODO: add your "Your Name" column here (e.g. user_name VARCHAR(50) NOT NULL),
+    -- matching the column used in your servlets
     day_of_week VARCHAR(20) NOT NULL,
     workout_split VARCHAR(50) NOT NULL,
     protein_intake INT NOT NULL,
@@ -236,7 +240,7 @@ http://localhost:8080/WorkoutLogger/index.jsp
 
 1. **Add a log** – on the front page, choose the day, enter your workout split, gym entry time, duration (minutes) and protein intake, then submit.
 2. **View history** – after saving, you are taken to the dashboard, which lists your logged sessions with their timestamps.
-3. **Edit a log** – click the **Edit** button next to an entry. The edit page opens with that record's current values. Change what you need and save; you are returned to the dashboard with a confirmation message.
+3. **Edit a log** – click the **Edit** button next to an entry. The **Edit Workout** page opens with that record's current values (name, day of the week, workout split, gym time, duration and protein intake). Change what you need and click **Update Log** to save, or **Cancel** to discard your changes. After saving, you are returned to the dashboard.
 4. **Delete a log** – remove any entry from the dashboard; a flash message confirms the result.
 
 ---
