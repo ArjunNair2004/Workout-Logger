@@ -28,7 +28,7 @@
 - [Usage](#-usage)
 - [Configuration](#️-configuration)
 - [Troubleshooting](#-troubleshooting)
-- [Roadmap](#-roadmap)
+- [Future Scope](#-future-scope)
 - [Contributing](#-contributing)
 - [License](#-license)
 - [Author](#-author)
@@ -275,18 +275,18 @@ http://localhost:8080/WorkoutLogger/index.jsp
 
 ---
 
-## 🗺️ Roadmap
+## 🔮 Future Scope
 
-Ideas for future improvements:
-
-- [x] Edit / update existing workout logs
-- [ ] User accounts and authentication
-- [ ] Charts for protein intake and workout duration over time
-- [ ] Filter and search logs by day or muscle group
-- [ ] Weekly and monthly summaries
-- [ ] Connection pooling (e.g. HikariCP) and externalised configuration
-- [ ] Docker Compose setup for Tomcat + MySQL
-- [ ] Export logs to CSV
+- **🔐 User Authentication** – Add persistent sessions and distinct user accounts, with a unique login history for each user.
+- **📊 Data Visualization** – Use a charting library such as Chart.js to show weekly protein intake trends and how consistent your workout times are.
+- **🛡️ Improved Security** – Stronger input validation and strong password policies for a fully secure system.
+- **🧠 Predictive Analytics & ML** – An AI-driven recommendation engine that analyzes past workout logs to suggest optimized workout splits and protein intake adjustments based on your progress.
+- **📤 Data Portability & Export** – Generate downloadable CSV or PDF reports (e.g. with iText for PDF or Apache POI for Excel) to share your history with personal trainers or dietitians.
+- **🥗 External Nutrition APIs & Meal Generation** – Connect to databases like USDA FoodData Central or Edamam to calculate exact macros from text meal inputs instead of manual protein estimates. An LLM (LangChain + Groq) can then generate custom recipes from your remaining daily macros and available ingredients.
+- **🤖 Personalized AI Coach** – A conversational coach built with LangChain, ChromaDB and RAG that uses tool-calling to query your workout, diet and biometric records for personalized coaching, technique tips and motivation.
+- **📏 Biometric Analytics & Dynamic Workout Splits** – Track height, weight and auto-calculated BMI, and generate adaptive weekly splits that support progressive overload and recovery.
+- **☁️ Cloud Containerization & Deployment** – Move from a local Apache Tomcat setup to a scalable cloud environment by containerizing the MVC app with Docker (plus MySQL via Docker Compose) and deploying it on AWS or Google Cloud.
+- **🧩 Smaller improvements** – Filter and search logs by day or muscle group, weekly and monthly summaries, and connection pooling (e.g. HikariCP) with externalized configuration.
 
 ---
 
