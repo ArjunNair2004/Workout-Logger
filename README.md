@@ -54,19 +54,19 @@ The application follows the classic **Model-View-Controller (MVC)** pattern usin
 
 | Login | Sign Up |
 |:---:|:---:|
-| ![Login Page](<Workout Logger Login Page.png>) | ![Register Page](<Workout Logger Register Page.png>) |
+| ![Login Page](Workout%20Logger%20Login%20Page.png) | ![Register Page](Workout%20Logger%20Register%20Page.png) |
 
 ### 📋 Workout Tracking
 
 | Dashboard | Log Workout |
 |:---:|:---:|
-| ![Dashboard](<Workout Logger Dashboard Page.png>) | ![Log Workout](<Workout Logger Log Workout Page.png>) |
+| ![Dashboard](Workout%20Logger%20Dashboard%20Page.png) | ![Log Workout](Workout%20Logger%20Log%20Workout%20Page.png) |
 
 ### ✏️ Editing
 
 | Edit Workout |
 |:---:|
-| ![Edit Page](<Workout Logger Edit Page.png>) |
+| ![Edit Page](Workout%20Logger%20Edit%20Page.png) |
 
 
 ---
