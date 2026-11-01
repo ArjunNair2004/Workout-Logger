@@ -54,19 +54,19 @@ The application follows the classic **Model-View-Controller (MVC)** pattern usin
 
 | Login | Sign Up |
 |:---:|:---:|
-| ![Login Page](Workout%20Logger%20Login%20Page.png) | ![Register Page](Workout%20Logger%20Register%20Page.png) |
+| ![Login Page](login.png) | ![Register Page](register.png) |
 
 ### 📋 Workout Tracking
 
 | Dashboard | Log Workout |
 |:---:|:---:|
-| ![Dashboard](Workout%20Logger%20Dashboard%20Page.png) | ![Log Workout](Workout%20Logger%20Log%20Workout%20Page.png) |
+| ![Dashboard](dashboard.png) | ![Log Workout](log-workout.png) |
 
 ### ✏️ Editing
 
 | Edit Workout |
 |:---:|
-| ![Edit Page](Workout%20Logger%20Edit%20Page.png) |
+| ![Edit Page](edit.png) |
 
 
 ---
@@ -197,11 +197,11 @@ Workout-Logger/
 │           └── WEB-INF/
 │               ├── web.xml                # Welcome file & routing configuration
 │               └── lib/                   # mysql-connector-j, JSTL JARs
-├── Workout Logger Login Page.png          # Screenshot – login
-├── Workout Logger Register Page.png       # Screenshot – sign up
-├── Workout Logger Dashboard Page.png      # Screenshot – dashboard
-├── Workout Logger Log Workout Page.png    # Screenshot – new workout form
-├── Workout Logger Edit Page.png           # Screenshot – edit workout
+├── login.png                              # Screenshot – login
+├── register.png                           # Screenshot – sign up
+├── dashboard.png                          # Screenshot – dashboard
+├── log-workout.png                        # Screenshot – new workout form
+├── edit.png                               # Screenshot – edit workout
 ├── .gitignore
 └── README.md
 ```
