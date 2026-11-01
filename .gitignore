@@ -1,0 +1,28 @@
+# Maven build output
+target/
+
+# Eclipse IDE files
+.settings/
+.project
+.classpath
+.metadata/
+
+# VS Code files
+.vscode/
+
+# Compiled class files
+*.class
+
+# Package Files
+*.war
+*.jar
+*.ear
+*.zip
+*.tar.gz
+
+# Log files
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
